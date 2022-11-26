@@ -1,13 +1,11 @@
 require('dotenv').config();
+require('./config/db.config');
 
 const createError = require('http-errors');
 const express = require('express');
 const mongoose = require('mongoose');
 const logger = require('morgan');
 const passport = require('passport');
-
-require('./config/passport.config');
-require('./config/db.config');
 const cors = require('./config/cors.config');
 const session = require('./config/session.config');
 
@@ -26,10 +24,9 @@ const routes = require('./config/routes.config');
 app.use('/api', routes);
 
 /** Error Handling */
-
 app.use((req, res, next) => {
-  next(createError(404, 'Route not found'))
-})
+  next(createError(404, 'Route not found'));
+});
 
 app.use((error, req, res, next) => {
   if (error instanceof mongoose.Error.ValidationError) {
@@ -50,17 +47,15 @@ app.use((error, req, res, next) => {
   data.message = error.message;
 
   if (error.errors) {
-    data.errors = Object.keys(error.errors)
-      .reduce((errors, key) => {
-        errors[key] = error.errors[key].message;
-        return errors;
-      }, {});
+    data.errors = Object.keys(error.errors).reduce((errors, key) => {
+      errors[key] = error.errors[key].message;
+      return errors;
+    }, {});
   }
   res.status(error.status).json(data);
 });
 
 const port = process.env.PORT || 8000;
-
 app.listen(port, () => {
-  console.info(`Application running at port ${port}`)
+  console.info(`Application running at port ${port}`);
 });
