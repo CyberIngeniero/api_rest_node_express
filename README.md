@@ -14,8 +14,8 @@ Repository: [Link](https://github.com/CyberIngeniero/server_architecture_course)
 `commit: 71b2db57d889890c37a32689d36cdce337d96f55`
 - [X] Activity 2: Add a API CRUD for POST method
 `commit: 5ad81067f49463d358f690363022c8fc6c9fbf64`
-- [ ] Activity 3: Add authentication method for users
-`commit: `
+- [X] Activity 3: Add authentication method for users
+`commit: deef9b7432ee40f8cf598115a00e982c5ac7aec4`
 - [ ] Activity 4: Add confirmation for register.
 `commit: `
 
