@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 require('mongoose-type-email');
 const bcrypt = require('bcrypt');
 const Schema = mongoose.Schema;
+
 const PASSWORD_PATTERN = /^.{8,}$/;
 
 const schema = new Schema(
@@ -64,6 +65,8 @@ schema.pre('save', function (next) {
 });
 
 schema.methods.checkPassword = function (passwordToCheck) {
+  console.log('password', this.password);
+  console.log('passwordToCheck', passwordToCheck);
   return bcrypt.compare(passwordToCheck, this.password);
 };
 
