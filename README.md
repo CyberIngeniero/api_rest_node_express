@@ -16,8 +16,8 @@ Repository: [Link](https://github.com/CyberIngeniero/server_architecture_course)
 `commit: 5ad81067f49463d358f690363022c8fc6c9fbf64`
 - [X] Activity 3: Add authentication method for users
 `commit: deef9b7432ee40f8cf598115a00e982c5ac7aec4`
-- [ ] Activity 4: Add confirmation for register.
-`commit: `
+- [X] Activity 4: Add confirmation for register.
+`commit: 968ec487a5e88d1af30724ef45823b3b3e4dd4d1`
 
 ## Documentation
 
