@@ -12,6 +12,16 @@
 				{
 					"name": "Create new post",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzgzNDI1ZjI1YWYwNTZkNjgzZWEwZmEiLCJleHAiOjE2Njk1NTAyMjUuODcxLCJpYXQiOjE2Njk1NDY2MjV9.o2oenHoqcEzHXQkpZD1r3xQqP6-y2bc7295q409H3Do",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -39,6 +49,16 @@
 				{
 					"name": "Get all posts",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzgzNDI1ZjI1YWYwNTZkNjgzZWEwZmEiLCJleHAiOjE2Njk1NTAyMjUuODcxLCJpYXQiOjE2Njk1NDY2MjV9.o2oenHoqcEzHXQkpZD1r3xQqP6-y2bc7295q409H3Do",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -57,6 +77,16 @@
 				{
 					"name": "Get post by id",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzgzNDI1ZjI1YWYwNTZkNjgzZWEwZmEiLCJleHAiOjE2Njk1NTAyMjUuODcxLCJpYXQiOjE2Njk1NDY2MjV9.o2oenHoqcEzHXQkpZD1r3xQqP6-y2bc7295q409H3Do",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -72,7 +102,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "638208ad1a762a69c483c581",
+									"value": "638342b825af056d683ea0ff",
 									"description": "Post id"
 								}
 							]
@@ -83,6 +113,16 @@
 				{
 					"name": "Update post by id",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzgzNDI1ZjI1YWYwNTZkNjgzZWEwZmEiLCJleHAiOjE2Njk1NTAyMjUuODcxLCJpYXQiOjE2Njk1NDY2MjV9.o2oenHoqcEzHXQkpZD1r3xQqP6-y2bc7295q409H3Do",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PATCH",
 						"header": [],
 						"body": {
@@ -107,7 +147,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "638208ad1a762a69c483c581",
+									"value": "638342b825af056d683ea0ff",
 									"description": "Post id"
 								}
 							]
@@ -118,6 +158,16 @@
 				{
 					"name": "Delete post by id",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzgzNDI1ZjI1YWYwNTZkNjgzZWEwZmEiLCJleHAiOjE2Njk1NTAyMjUuODcxLCJpYXQiOjE2Njk1NDY2MjV9.o2oenHoqcEzHXQkpZD1r3xQqP6-y2bc7295q409H3Do",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -133,7 +183,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "638208ad1a762a69c483c581",
+									"value": "638342b825af056d683ea0ff",
 									"description": "Post id"
 								}
 							]
@@ -153,7 +203,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Nibaldito\",\r\n    \"email\": \"cyberingeniero@gmail.com\",\r\n    \"password\": \"123456789\",\r\n    \"bio\": \"Probando API\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Nibaldito\",\r\n    \"email\": \"nibaldo@gmail.com\",\r\n    \"bio\": \"Probando API\",\r\n    \"password\": \"123456789\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -174,13 +224,40 @@
 					"response": []
 				},
 				{
-					"name": "Login",
+					"name": "Validate Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/account/validate/:token",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"validate",
+								":token"
+							],
+							"variable": [
+								{
+									"key": "token",
+									"value": "d0b3dc8086d9efc584559b3ba6659253:382282978203a9eaec082462df3f1280021bdfd71932ae0476222bb7c1d37d29",
+									"description": "Token sended by email"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Users",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"cyberingeniero@gmail.com\",\r\n    \"password\": \"123456789\"\r\n}",
+							"raw": "{\r\n    \"email\": \"nibaldo@gmail.com\",\r\n    \"password\": \"123456789\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
