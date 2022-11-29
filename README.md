@@ -19,6 +19,10 @@ Repository: [Link](https://github.com/CyberIngeniero/server_architecture_course)
 - [X] Activity 4: Add confirmation for register.
 `commit: 968ec487a5e88d1af30724ef45823b3b3e4dd4d1`
 
+## Heroku Deploy
+
+The API was deployed in Heroku and can be found at the following link: [HEROKU DEPLOY](https://api-posts-servers-arch.herokuapp.com/)
+
 ## Documentation
 
 This project was bootstrapped with **Node js**.
@@ -31,7 +35,6 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:8000](http://localhost:8000) to view it in your browser.
-
 
 #### `npm run dev`
 
